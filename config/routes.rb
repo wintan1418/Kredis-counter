@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :posts
   get 'counter', to: 'counter#show'
   post 'increment', to: 'counter#increment'
   post 'decrement', to: 'counter#decrement'
