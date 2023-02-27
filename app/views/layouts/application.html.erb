@@ -13,6 +13,10 @@
   <body>
      <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
+       <% current_user.recently_viewed_posts.elements.each do |posts|%>
+       <% posts = Post.find(posts) %>
+       <%= link_to posts.title, post_path(posts)%>
+       <%end%>
     <%= yield %>
   </body>
 </html>
