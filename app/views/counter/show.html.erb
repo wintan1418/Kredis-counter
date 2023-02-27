@@ -1,0 +1,9 @@
+<h1>Counter#show</h1>
+<p>Find me in app/views/counter/show.html.erb</p>
+<%= turbo_stream_from 'counter_stream' %>
+
+<%= button_to '+', increment_path %>
+<div id='counter'>
+<%= @counter.value%>
+</div>
+<%= button_to '-', decrement_path %>
